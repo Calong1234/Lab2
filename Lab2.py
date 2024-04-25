@@ -16,16 +16,26 @@ def calc_average():
 def find_min_max():
     minimum=min(inputt)
     maximum=max(inputt)
-    print("the minimum is " + str(minimum) + " and the maximum is " + str(maximum))
+    print("the minimum temperature is " + str(minimum) + " and the maximum temperature is " + str(maximum))
 
 def sort_temperature():
-    print(sort_temperature)
+    inputt.sort()
+    print(inputt)
 
 def calc_median_temperature():
-    print(calc_median_temperature)
+    length=len(inputt)
+    if (len(inputt)%2==0):
+        middle1=inputt[length//2]
+        middle2=inputt[(length//2)-1]
+        median=(middle1+middle2)/2
+    else:
+        median=inputt[length//2]
+    print("the median temperature is " + str(median))
 
 
 display_main_menu()
 get_user_input()
 calc_average()
 find_min_max()
+sort_temperature()
+calc_median_temperature()
