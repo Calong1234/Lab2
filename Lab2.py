@@ -1,4 +1,12 @@
-print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
+def main():
+    print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
+    display_main_menu()
+    num_list = get_user_input()
+    calc_average(num_list)
+    find_min_max(num_list)
+    sort_temperature(num_list)
+    calc_median_temperature(num_list)
+
 def display_main_menu():
     print("Enter some numbers separated by commas (e.g. 5, 67, 32):")
 
@@ -12,7 +20,7 @@ def get_user_input():
 def calc_average(x):
     average=sum(x)/len(x)
     print ("the average is " + str(average))
-    return x
+    return average
 
 def find_min_max(x):
     minimum=min(x)
@@ -38,9 +46,6 @@ def calc_median_temperature(x):
     return median
 
 
-display_main_menu()
-num_list=get_user_input()
-calc_average(num_list)
-find_min_max(num_list)
-sort_temperature(num_list)
-calc_median_temperature(num_list)
+
+if __name__ == "__main__":
+    main()
